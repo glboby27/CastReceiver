@@ -46,10 +46,10 @@ const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
 /**
  * check supported codec
  */
-castDebugLogger.debug(LOG_TAG, 'audio/mp4_mp4a.40.5 : ', context.canDisplayType('audio/mp4', 'mp4a.40.5'));
-castDebugLogger.debug(LOG_TAG, 'audio/mp4_mp4a.40.2 : ', context.canDisplayType('audio/mp4', 'mp4a.40.2'));
-castDebugLogger.debug(LOG_TAG, 'video/mp4_avc1.4d4028 : ', context.canDisplayType('video/mp4', 'avc1.4d4028'));
-castDebugLogger.debug(LOG_TAG, 'video/mp4_avc1.64001e : ', context.canDisplayType('video/mp4', 'avc1.64001e'));
+castDebugLogger.debug(LOG_RECEIVER_TAG , 'audio/mp4_mp4a.40.5 : ', context.canDisplayType('audio/mp4', 'mp4a.40.5'));
+castDebugLogger.debug(LOG_RECEIVER_TAG , 'audio/mp4_mp4a.40.2 : ', context.canDisplayType('audio/mp4', 'mp4a.40.2'));
+castDebugLogger.debug(LOG_RECEIVER_TAG , 'video/mp4_avc1.4d4028 : ', context.canDisplayType('video/mp4', 'avc1.4d4028'));
+castDebugLogger.debug(LOG_RECEIVER_TAG , 'video/mp4_avc1.64001e : ', context.canDisplayType('video/mp4', 'avc1.64001e'));
 
 
 /**
