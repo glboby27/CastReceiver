@@ -47,6 +47,15 @@ class CastQueue extends cast.framework.QueueBase {
     if (loadRequestData) {
       let queueData = loadRequestData.queueData;
 
+       /**
+       * check supported codec
+       */
+      const context = cast.framework.CastReceiverContext.getInstance();
+      castDebugLogger.info(LOG_QUEUE_TAG , 'audio/mp4_mp4a.40.5 : ' + context.canDisplayType('audio/mp4', 'mp4a.40.5'));
+      castDebugLogger.info(LOG_QUEUE_TAG , 'audio/mp4_mp4a.40.2 : ' + context.canDisplayType('audio/mp4', 'mp4a.40.2'));
+      castDebugLogger.info(LOG_QUEUE_TAG , 'video/mp4_avc1.4d4028 : ' + context.canDisplayType('video/mp4', 'avc1.4d4028'));
+      castDebugLogger.info(LOG_QUEUE_TAG , 'video/mp4_avc1.64001e : ' + context.canDisplayType('video/mp4', 'avc1.64001e'));
+
       // Create a new queue with media from load request if one doesn't exist.
       if (!queueData || !queueData.items || !queueData.items.length) {
         castDebugLogger.info(LOG_QUEUE_TAG,
