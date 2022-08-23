@@ -61,7 +61,7 @@ context.addEventListener(cast.framework.system.EventType.READY, () => {
      /**
       * Show debug overlay.
       */
-        castDebugLogger.showDebugLogs(true);
+        castDebugLogger.showDebugLogs(false);
     }
 });
 
