@@ -26,6 +26,7 @@ cast-media-player {
   --splash-image: url('res/splash.png');
   --logo-image: url('res/install_icons_icon_bi_text.png');
   --spinner-image: url('res/loading.png');
+  --buffering-image: url('res/loading.png');
   /*--splash-size: cover;*/
   /* --slideshow-interval: 8;
   --slideshow-animation: 3;
