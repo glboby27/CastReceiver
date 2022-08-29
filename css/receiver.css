@@ -23,9 +23,9 @@ cast-media-player {
   /*--progress-color: rgb(0, 255, 255);*/
   --progress-color: rgb(255, 31, 90);
   /*--splash-image: url('res/background-1.jpg');*/
-  --splash-image: url('rsc/splash.png');
-  --logo-image: url('rsc/install_icons_icon_bi_text.png');
-  --spinner-image: url('rsc/loading.png');
+  --splash-image: url('res/splash.png');
+  --logo-image: url('res/install_icons_icon_bi_text.png');
+  --spinner-image: url('res/loading.png');
   /*--splash-size: cover;*/
   /* --slideshow-interval: 8;
   --slideshow-animation: 3;
