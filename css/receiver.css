@@ -27,6 +27,8 @@ cast-media-player {
   --logo-image: url('res/install_icons_icon_bi_text.png');
   --spinner-image: url('res/loading.png');
   --buffering-image: url('res/loading.png');
+  --pause-image: url('res/controls_player_btn_player_pause.png');
+  --play-image: url('res/controls_player_btn_player_play.png');
   /*--splash-size: cover;*/
   /* --slideshow-interval: 8;
   --slideshow-animation: 3;
