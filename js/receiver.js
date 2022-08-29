@@ -141,7 +141,7 @@ function addBreaks(mediaInformation) {
         title: clip1.title,
         contentUrl: clip1.stream.dash,
         contentType: 'application/dash+xml',
-        whenSkippable: 5
+        whenSkippable: 1
       }
     ];
 
