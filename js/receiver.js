@@ -98,8 +98,18 @@ playerManager.addEventListener(
         'LOAD_FAILED: Verify the load request is set up ' +
         'properly and the media is able to play.');
     }
-});
+    // cast.framework.events.EventType.PLAYER_LOAD_COMPLETE, () => {
+    //   const audioTracksManager = playerManager.getAudioTracksManager();
+  
+    //   // Get all audio tracks
+    //   const tracks = audioTracksManager.getTracks();
+  
+    //   // Choose the first audio track to be active by specifying its ID
+    //   audioTracksManager.setActiveById(tracks[0].trackId);
 
+    //   castDebugLogger.info(LOG_RECEIVER_TAG,'');
+    // }
+});
 
 /**
  * check supported codec
