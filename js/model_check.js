@@ -1,4 +1,6 @@
 
+'use_strict';
+
 const context = cast.framework.CastReceiverContext.getInstance();
 const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
 const LOG_MODEL_CHECK_TAG = 'Model_Check';
@@ -15,6 +17,6 @@ const LOG_MODEL_CHECK_TAG = 'Model_Check';
  castDebugLogger.info(LOG_MODEL_CHECK_TAG , 'video/mp4_avc1.4d4028 : ' + context.canDisplayType('video/mp4', 'avc1.4d4028'));
  castDebugLogger.info(LOG_MODEL_CHECK_TAG , 'video/mp4_avc1.64001e : ' + context.canDisplayType('video/mp4', 'avc1.64001e'));
 
- 
+
  
  
