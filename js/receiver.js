@@ -229,7 +229,7 @@ playerManager.setMessageInterceptor(
     .then(() => {
       // If the source is a url that points to an asset don't fetch from backend
       if (sourceId.includes('.')) {
-        castDebugLogger.debug(LOG_RECEIVER_TAG,
+        castDebugLogger.info(LOG_RECEIVER_TAG,
           "Interceptor received full URL");
         loadRequestData.media.contentUrl = source;
         return loadRequestData;
@@ -237,7 +237,7 @@ playerManager.setMessageInterceptor(
 
       // Fetch the contentUrl if provided an ID or entity URL
       else {
-        castDebugLogger.debug(LOG_RECEIVER_TAG, "Interceptor received ID");
+        castDebugLogger.info(LOG_RECEIVER_TAG, "Interceptor received ID");
         return fetchMediaById(sourceId)
         .then((item) => {
           let metadata = new cast.framework.messages.GenericMediaMetadata();
@@ -249,8 +249,8 @@ playerManager.setMessageInterceptor(
           // mediaInfo.metadata.images = [{'url': station.station_icon}];
           metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/ToTheFuture2-480x270.jpg'}
         , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/ToTheFuture-789x1200.jpg'}];
-          castDebugLogger.debug(LOG_RECEIVER_TAG, "item.title : " + item.title);
-          castDebugLogger.debug(LOG_RECEIVER_TAG, "item.description : " + item.description);
+          castDebugLogger.info(LOG_RECEIVER_TAG, "item.title : " + item.title);
+          castDebugLogger.info(LOG_RECEIVER_TAG, "item.description : " + item.description);
           
           loadRequestData.media.contentId = item.stream.dash;
           loadRequestData.media.contentType = 'application/dash+xml';
