@@ -243,6 +243,15 @@ playerManager.setMessageInterceptor(
           let metadata = new cast.framework.messages.GenericMediaMetadata();
           metadata.title = item.title;
           metadata.subtitle = item.description;
+          // mediaInfo.metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
+          // mediaInfo.metadata.title = station.station_name;
+          // mediaInfo.metadata.subtitle = "Icerrr Chromecast";
+          // mediaInfo.metadata.images = [{'url': station.station_icon}];
+          metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/ToTheFuture2-480x270.jpg'}
+        , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/ToTheFuture-789x1200.jpg'}];
+          castDebugLogger.debug(LOG_RECEIVER_TAG, "item.title : " + item.title);
+          castDebugLogger.debug(LOG_RECEIVER_TAG, "item.description : " + item.description);
+          
           loadRequestData.media.contentId = item.stream.dash;
           loadRequestData.media.contentType = 'application/dash+xml';
           loadRequestData.media.metadata = metadata;
