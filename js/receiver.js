@@ -246,9 +246,10 @@ playerManager.setMessageInterceptor(
         metadata.metadataType = 1;
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 5 : " + source);
         //mediaInfo.metadata = metadata; // error
-        mediaInfo.metadata = new cast.framework.messages.GenericMediaMetadata(); // ok
+        //mediaInfo.metadata = new cast.framework.messages.GenericMediaMetadata(); // error
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 6 : " + source);
-        mediaInfo.metadata = metadata;
+        //mediaInfo.metadata = metadata;
+        loadRequestData.media.metadata = metadata;
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 7 : " + source);
         return loadRequestData;
       }
