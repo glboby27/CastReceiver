@@ -238,12 +238,16 @@ playerManager.setMessageInterceptor(
         //loadRequestData.media.metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
         //castDebugLogger.info(LOG_RECEIVER_TAG, "item.title : " + item.title); // no item here
         //castDebugLogger.info(LOG_RECEIVER_TAG, "item.description : " + item.description); // no item here
-        let metadata = new cast.framework.messages.GenericMediaMetadata();
-        metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
-        metadata.metadataType = chrome.cast.media.MetadataType.MOVIE;
+        loadRequestData.media.metadata.metadataType = 1;
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 2 : " + source);
-        mediaInfo.metadata = metadata;
+        let metadata = new cast.framework.messages.GenericMediaMetadata();
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 3 : " + source);
+        metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 4 : " + source);
+        metadata.metadataType = chrome.cast.media.MetadataType.MOVIE;
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 4 : " + source);
+        mediaInfo.metadata = metadata;
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 6 : " + source);
         return loadRequestData;
       }
 
@@ -266,7 +270,7 @@ playerManager.setMessageInterceptor(
           
           loadRequestData.media.contentId = item.stream.dash;
           loadRequestData.media.contentType = 'application/dash+xml';
-          loadRequestData.media.metadata = metadata;
+          c = metadata;
 
           return loadRequestData;
         })
