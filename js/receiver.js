@@ -247,8 +247,8 @@ playerManager.setMessageInterceptor(
           // mediaInfo.metadata.title = station.station_name;
           // mediaInfo.metadata.subtitle = "Icerrr Chromecast";
           // mediaInfo.metadata.images = [{'url': station.station_icon}];
-          metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/ToTheFuture2-480x270.jpg'}
-        , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/ToTheFuture-789x1200.jpg'}];
+          metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg'}
+        , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
           castDebugLogger.info(LOG_RECEIVER_TAG, "item.title : " + item.title);
           castDebugLogger.info(LOG_RECEIVER_TAG, "item.description : " + item.description);
           
