@@ -232,6 +232,9 @@ playerManager.setMessageInterceptor(
         castDebugLogger.info(LOG_RECEIVER_TAG,
           "Interceptor received full URL");
         loadRequestData.media.contentUrl = source;
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source : " + source);
+        loadRequestData.media.metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg'}
+        , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
         return loadRequestData;
       }
 
