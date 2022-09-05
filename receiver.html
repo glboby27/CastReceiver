@@ -29,17 +29,20 @@ Cast.
 
 <body>
 
+  
+  <cast-media-player></cast-media-player>
+  <!--script src="js/model_check.js" type="module"></script-->
   <style>
-    cast-media-player
-    {
+    body {
+      --playback-logo-image: url('https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg');
+    }
+    cast-media-player {
       --progress-color: rgb(255, 31, 90);
       --buffering-image: url('res/loading.png');
       --pause-image: url('res/controls_player_btn_player_pause.png');
       --play-image: url('res/controls_player_btn_player_play.png');
     }
   </style>
-  <cast-media-player></cast-media-player>
-  <!--script src="js/model_check.js" type="module"></script-->
 
   <footer>
     <script src="js/receiver.js" type="module"></script>
