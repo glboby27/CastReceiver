@@ -232,12 +232,10 @@ playerManager.setMessageInterceptor(
         castDebugLogger.info(LOG_RECEIVER_TAG,
           "Interceptor received full URL");
         loadRequestData.media.contentUrl = source;
-        castDebugLogger.info(LOG_RECEIVER_TAG, "source 1 : " + source);
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 11 : " + source);
         /*loadRequestData.media.metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg'}
         , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];*/
         //loadRequestData.media.metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
-        //castDebugLogger.info(LOG_RECEIVER_TAG, "item.title : " + item.title); // no item here
-        //castDebugLogger.info(LOG_RECEIVER_TAG, "item.description : " + item.description); // no item here
         //loadRequestData.media.metadata.metadataType = 1; // ok
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 2 : " + source);
         let metadata = new cast.framework.messages.GenericMediaMetadata(); // ok
@@ -247,8 +245,11 @@ playerManager.setMessageInterceptor(
         //metadata.metadataType = chrome.cast.media.MetadataType.MOVIE; // error
         metadata.metadataType = 1;
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 5 : " + source);
-        mediaInfo.metadata = metadata;
+        //mediaInfo.metadata = metadata; // error
+        mediaInfo.metadata = new cast.framework.messages.GenericMediaMetadata(); // ok
         castDebugLogger.info(LOG_RECEIVER_TAG, "source 6 : " + source);
+        mediaInfo.metadata = metadata;
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 7 : " + source);
         return loadRequestData;
       }
 
@@ -271,7 +272,7 @@ playerManager.setMessageInterceptor(
           
           loadRequestData.media.contentId = item.stream.dash;
           loadRequestData.media.contentType = 'application/dash+xml';
-          c = metadata;
+          loadRequestData.media.metadata = metadata;
 
           return loadRequestData;
         })
