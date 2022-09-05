@@ -232,7 +232,7 @@ playerManager.setMessageInterceptor(
         castDebugLogger.info(LOG_RECEIVER_TAG,
           "Interceptor received full URL");
         loadRequestData.media.contentUrl = source;
-        castDebugLogger.info(LOG_RECEIVER_TAG, "source : " + source);
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 1 : " + source);
         /*loadRequestData.media.metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/480x270/BigBuckBunny.jpg'}
         , {'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];*/
         //loadRequestData.media.metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
@@ -241,7 +241,9 @@ playerManager.setMessageInterceptor(
         let metadata = new cast.framework.messages.GenericMediaMetadata();
         metadata.images = [{'url' : 'https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/images/780x1200/BigBuckBunny-780x1200.jpg'}];
         metadata.metadataType = chrome.cast.media.MetadataType.MOVIE;
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 2 : " + source);
         mediaInfo.metadata = metadata;
+        castDebugLogger.info(LOG_RECEIVER_TAG, "source 3 : " + source);
         return loadRequestData;
       }
 
